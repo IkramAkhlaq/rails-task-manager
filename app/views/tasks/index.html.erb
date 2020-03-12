@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="header">
+    <h1> See all of your tasks below <h1>
+  </div>
+  <div class="middle">
+      <ul>
+    <% @tasks.each do |task| %>
+      <li>
+      <input type='checkbox'><%= link_to task.title, task_path(task) %> </li></input>
+      <% end %>
+    </ul>
+  </div>
+  <div class='btn-new'>
+    <%= link_to "Create new task", new_task_path %>
+  </div>
+</div>
